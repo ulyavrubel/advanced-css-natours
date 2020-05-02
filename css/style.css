@@ -30,7 +30,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  /* border-box - border and padding no longer added to the total width or total height */
+  /* border-box - total width or total height will include padding and border */
   box-sizing: border-box;
 }
 
@@ -51,17 +51,17 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   /* to center the textbox: with position absolute top and left indicates top left corner with % from the parent's width and height, transform move element from this corner according to x y values*/
   position: absolute;
   top: 40%;
@@ -78,7 +78,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   /* block elements occupy the entire width what is avaliable and create line breaks before and after them  */
   display: block;
   font-size: 6rem;
@@ -91,7 +91,7 @@ body {
   /* animation-iteration-count: 3; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -163,7 +163,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: white;
   color: #777;
 }
@@ -183,7 +183,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: white;
 }
 
@@ -192,7 +192,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75;
   /* automatically apply 0% of animation before animation starts */
   animation-fill-mode: backwards;
