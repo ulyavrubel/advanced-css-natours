@@ -1,6 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
+
   //center a block element horizontally inside another block element
   margin: 0 auto;
 
@@ -13,7 +13,6 @@
 
   //^ beginning - select all elements where class starts with "col-", to select end use $
   [class^="col-"] {
-    background-color: royalblue;
     float: left;
 
     &:not(:last-child) {
