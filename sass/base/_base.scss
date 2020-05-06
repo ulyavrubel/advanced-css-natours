@@ -1,0 +1,21 @@
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* to make counting to rem easier aplly 10px instaed of 16px to default font-size value */
+  /* to allow user change font size better to use % from default 16px, 10px is 62.5% from 16px */
+  //this defines what 1 rem is
+  font-size: 62.5%;
+}
+
+/* everything related to font should be specified in the body, because inheritance won't work from universal selector */
+body {
+  /* border-box - total width or total height will include padding and border */
+  box-sizing: border-box;
+}

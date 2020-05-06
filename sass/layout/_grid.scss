@@ -1,0 +1,63 @@
+.row {
+  max-width: $grid-width;
+  background-color: #eee;
+  //center a block element horizontally inside another block element
+  margin: 0 auto;
+
+  //everything exept the last child
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  //^ beginning - select all elements where class starts with "col-", to select end use $
+  [class^="col-"] {
+    background-color: royalblue;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+  .col-1-of-3 {
+    width: calc((100% - #{$gutter-horizontal} - #{$gutter-horizontal}) / 3);
+  }
+  .col-1-of-4 {
+    width: calc(
+      (
+          100% - #{$gutter-horizontal} - #{$gutter-horizontal} - #{$gutter-horizontal}
+        ) / 4
+    );
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      (2 * (100% - #{$gutter-horizontal} - #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
+  }
+  .col-2-of-4 {
+    width: calc(
+      (
+          2 *
+            (
+              100% - #{$gutter-horizontal} - #{$gutter-horizontal} - #{$gutter-horizontal}
+            ) / 4
+        ) + #{$gutter-horizontal}
+    );
+  }
+  .col-3-of-4 {
+    width: calc(
+      (
+          3 *
+            (
+              100% - #{$gutter-horizontal} - #{$gutter-horizontal} - #{$gutter-horizontal}
+            ) / 4
+        ) + #{$gutter-horizontal} + #{$gutter-horizontal}
+    );
+  }
+}
