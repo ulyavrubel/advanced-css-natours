@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: top;
   /* starting from left top corner clockwise */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* setting parent container with position relative, so child with position absolute will count coordinates from it */
   position: relative;

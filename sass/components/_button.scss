@@ -37,6 +37,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &::after {
     /* for after pseudo element obligatory to specify content: (could be empty "") and display: the same as parent element */
     content: "";
