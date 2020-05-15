@@ -1,5 +1,5 @@
 .card {
-  perspective: 150rem; //perspective is defined in parant wrapper, all content in the child div
+  perspective: 150rem; //perspective is defined in parent wrapper, all content in the child div
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    //The back face of an element is a mirror image of the front face being displayed.
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden; //rounded border for picture too
@@ -56,6 +57,7 @@
   &__picture {
     background-size: cover;
     height: 23rem;
+    //apply filter to image
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);

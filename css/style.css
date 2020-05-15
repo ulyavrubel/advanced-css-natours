@@ -1,3 +1,18 @@
+/*
+0 - 600px:  Phone
+600-900px:  Tablet portrait
+900-1200:   Tablet landscape
+
+1200 -1800: normal styles
+
+1800 - :    Big screens
+
+$breakpoint arg choices
+- phone
+- tab-port
+- tab-land
+- big-desctop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -38,6 +53,15 @@ html {
   /* to make counting to rem easier aplly 10px instaed of 16px to default font-size value */
   /* to allow user change font size better to use % from default 16px, 10px is 62.5% from 16px */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.5%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /* everything related to font should be specified in the body, because inheritance won't work from universal selector */
 body {
@@ -84,11 +108,11 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {

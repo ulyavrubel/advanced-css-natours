@@ -8,6 +8,7 @@
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
+    //space between img and borders
     outline-offset: 1rem;
 
     &--p1 {
@@ -31,6 +32,7 @@
     }
   }
 
+  //to style elements which are not hovered while others are
   &:hover &__photo:not(:hover) {
     transform: scale(0.9);
   }

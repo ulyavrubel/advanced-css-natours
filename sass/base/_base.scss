@@ -11,7 +11,19 @@ html {
   /* to make counting to rem easier aplly 10px instaed of 16px to default font-size value */
   /* to allow user change font size better to use % from default 16px, 10px is 62.5% from 16px */
   //this defines what 1 rem is
-  font-size: 62.5%;
+  font-size: 62.5%; //1 rem = 10px 10/16 = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.5%; //1rem = 9px, 9/16 = 56.5%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desctop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
 }
 
 /* everything related to font should be specified in the body, because inheritance won't work from universal selector */

@@ -95,6 +95,7 @@
     transform: scale(60);
   }
 
+  //show nav when checkbox is checked
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;

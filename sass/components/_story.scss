@@ -12,8 +12,11 @@
     width: 15rem;
     height: 15rem;
     float: left;
+
+    //to make text follow the image curve
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);

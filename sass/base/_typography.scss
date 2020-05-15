@@ -48,13 +48,15 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
+  //bacground visible only on text
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
 
   &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    // transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
