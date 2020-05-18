@@ -15,6 +15,11 @@
   /* setting parent container with position relative, so child with position absolute will count coordinates from it */
   position: relative;
 
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
   &__logo-box {
     position: absolute;
     top: 4rem;
